@@ -32,7 +32,7 @@
         <section class="main-content__forms">
             <h2 class="visually-hidden">Сортировка шаблонов по параметрам</h2>
             <!-- здесь будут формы сортировки-->
-            <form action="https://echo.htmlacademy.ru" method="post" name="template-parameters" oninput="min-value.value=min-value.value" oninput="max-value.value=max-value.value">
+            <form action="https://echo.htmlacademy.ru" method="post" name="template-parameters" oninput="min-value.value=min-value.value max-value.value=max-value.value">
                 <div class="template-parameters__value">
                     <fieldset aria-label="Сортировка по стоимоти">
                         <legend>Стоимость</legend>
@@ -40,8 +40,8 @@
                         <input type="range" name="min-value" id="min-value" min="0" max="30000" step="500">
                         <label for="max-value"></label>
                         <input type="range" name="max-value" id="max-value" min="500" max="30000" step="500"> от
-                        <output name="min-value" [0]></output> до
-                        <output name="max-value" [15 000]></output>
+                        <output name="min-value"></output> до
+                        <output name="max-value"></output>
                         <!--не выводит значения output, не знаю что делать  -->
                     </fieldset>
                 </div>
@@ -62,7 +62,7 @@
                         <input type="checkbox" name="advantage-block" id="advantage-block" value="Блок преимуществ"><label for="advantage-block">Блок преимущществ</label>
                         <input type="checkbox" name="news" id="news" value="Новости" checked><label for="news">Новости</label>
                         <input type="checkbox" name="gallery" id="gallery" value="Галерея"><label for="gallery">Галерея</label>
-                        <input type="checkbox" name="cart" id="cart" value="Корзина"><label form="cart">Корзина</label>
+                        <input type="checkbox" name="cart" id="cart" value="Корзина"><label for="cart">Корзина</label>
                     </fieldset>
                 </div>
 
