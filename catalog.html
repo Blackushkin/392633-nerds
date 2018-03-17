@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/normolize.css">
+    <link rel="stylesheet" href="css/normolize.css">
 </head>
 
 <body class="catalog">
@@ -30,42 +30,50 @@
     </header>
     <main class="main-content">
         <section class="main-content__forms">
-<!-- здесь будут формы сортировки-->
-            <form action="https://echo.htmlacademy.ru" method="post" name="template-parameters">
-                <fieldset>
-                    <legend>Стоимость</legend>
+            <h2 class="visually-hidden">Сортировка шаблонов по параметрам</h2>
+            <!-- здесь будут формы сортировки-->
+            <form action="https://echo.htmlacademy.ru" method="post" name="template-parameters" oninput="min-value.value=min-value.value" oninput="max-value.value=max-value.value">
+                <div class="template-parameters__value">
+                    <fieldset aria-label="Сортировка по стоимоти">
+                        <legend>Стоимость</legend>
                         <label for="min-value"></label>
                         <input type="range" name="min-value" id="min-value" min="0" max="30000" step="500">
                         <label for="max-value"></label>
-                        <input type="range" name="max-value" id="max-value" min="500" max="30000" step="500">
-                        от<output name="min-value">[0]</output>
-                        до<output name="max-value">[15000]</output>
-                </fieldset>
+                        <input type="range" name="max-value" id="max-value" min="500" max="30000" step="500"> от
+                        <output name="min-value" [0]></output> до
+                        <output name="max-value" [15 000]></output>
+                        <!--не выводит значения output, не знаю что делать  -->
+                    </fieldset>
+                </div>
 
-                <fieldset>
-                    <legend>Сетка</legend>
-                        <input type="radio" name="grid" id="adaptive" value="adaptive"><label for="adaptive">Адаптивная</label>
+                <div class="template-parameters__grid">
+                    <fieldset aria-label="Сортировка по типу сетки">
+                        <legend>Сетка</legend>
+                        <input type="radio" name="grid" id="adaptive" value="adaptive" checked><label for="adaptive">Адаптивная</label>
                         <input type="radio" name="grid" id="fixed" value="fixed"><label for="fixed">Фиксированная</label>
                         <input type="radio" name="grid" id="rubber" value="rubber"><label for="rubber">Резиновая</label>
-                </fieldset>
+                    </fieldset>
+                </div>
 
-                <fieldset>
-                    <legend>Особенности</legend>
+                <div class="template-parameters__features">
+                    <fieldset aria-label="Сортировка по особенностям">
+                        <legend>Особенности</legend>
                         <input type="checkbox" name="slider" id="slider" value="Слайдер" checked><label for="slider">Слайдер</label>
                         <input type="checkbox" name="advantage-block" id="advantage-block" value="Блок преимуществ"><label for="advantage-block">Блок преимущществ</label>
                         <input type="checkbox" name="news" id="news" value="Новости" checked><label for="news">Новости</label>
                         <input type="checkbox" name="gallery" id="gallery" value="Галерея"><label for="gallery">Галерея</label>
                         <input type="checkbox" name="cart" id="cart" value="Корзина"><label form="cart">Корзина</label>
-                </fieldset>
+                    </fieldset>
+                </div>
 
-                        <button class="button" type="submit">Показать</button>
+                <button class="button" type="submit">Показать</button>
 
             </form>
         </section>
 
         <section class="main-content__ready-templates">
             <div class="ready-templates__sorting">
-        <!-- точно не уверен как прописать верхную сортировку  -->
+                <!-- точно не уверен как прописать верхную сортировку  -->
                 <p></p>
                 <ul class="sorting__list">
                     <li class="sorting__item"></li>
@@ -77,12 +85,53 @@
             </div>
             <div class="ready-templates__content">
                 <ul class="ready-templates__content--list">
-                    <li class="ready-templates__content--item"><img src="img/img-sedona.jpg" alt="Фото как мы сделали сайт Sedona"></li>
-                    <li class="ready-templates__content--item"><img src="img/img-pink.jpg" alt="Фото как мы сделали сайт PINK"></li>
-                    <li class="ready-templates__content--item"><img src="img/img-barbershop.jpg" alt="Фото как мы сделали сайт Barbershop"></li>
-                    <li class="ready-templates__content--item"><img src="img/img-mishka.jpg" alt="Фото как мы сделали сайт MISHKA"></li>
-                    <li class="ready-templates__content--item"><img src="img/img-aplus.jpg" alt="Фото как мы сделали сайт Aplus"></li>
-                    <li class="ready-templates__content--item"><img src="img/img-kvast.jpg" alt="Фото как мы сделали сайт Kvast"></li>
+                    <li class="ready-templates__content--item">
+                        <img src="img/img-sedona.jpg" alt="Фото как мы сделали сайт Sedona">
+                        <p class="cintent__item--hover">
+                            <h3>Sedona</h3>
+                            <p>Информационный сайт  для туристов</p>
+                            <a href="#">9 900 руб.</a>
+                        </p>
+                    </li>
+                    <li class="ready-templates__content--item">
+                        <img src="img/img-pink.jpg" alt="Фото как мы сделали сайт PINK">
+                        <p class="cintent__item--hover">
+                            <h3>Pink App</h3>
+                            <p>Продуктовый лендинг приложения для iOS и Android</p>
+                            <a href="#">9 900 руб.</a>
+                        </p>
+                    </li>
+                    <li class="ready-templates__content--item">
+                        <img src="img/img-barbershop.jpg" alt="Фото как мы сделали сайт Barbershop">
+                        <p class="cintent__item--hover">
+                            <h3>Barbershop</h3>
+                            <p>Сайт салоны красоты. Для мужчин, да.</p>
+                            <a href="#">9 900 руб.</a>
+                        </p>
+                    </li>
+                    <li class="ready-templates__content--item">
+                        <img src="img/img-mishka.jpg" alt="Фото как мы сделали сайт MISHKA">
+                        <p class="cintent__item--hover">
+                            <h3>MISHKA</h3>
+                            <p>Интернет-магазин  вязаных игрушек</p>
+                            <a href="#">9 900 руб.</a>
+                        </p>
+                    </li>
+                    <li class="ready-templates__content--item"><img src="img/img-aplus.jpg" alt="Фото как мы сделали сайт Aplus">
+                        <p class="cintent__item--hover">
+                            <h3>A Plus</h3>
+                            <p>Лендинг курсов повышения квалификации</p>
+                            <a href="#">9 900 руб.</a>
+                        </p>
+                    </li>
+                    <li class="ready-templates__content--item">
+                        <img src="img/img-kvast.jpg" alt="Фото как мы сделали сайт Kvast">
+                        <p class="cintent__item--hover">
+                            <h3>КВАСТ</h3>
+                            <p>Промо-сайт производителя крафтового кваса</p>
+                            <a href="#">9 900 руб.</a>
+                        </p>
+                    </li>
                 </ul>
             </div>
             <div class="main-content__page-navigation">
@@ -101,7 +150,7 @@
         <div class="main-map__wrapper">
             <div class="map__address">
                 <p><b>NЁRDS DESIGN STUDIO</b></p>
-                <p>191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8</p>
+                <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
                 <p>тел. +7 (812) 275-75-75</p>
                 <a href="#" class="button">Напишите нам</a>
             </div>
@@ -125,3 +174,22 @@
 
         </div>
     </footer>
+    <section class="popap-write-to-us">
+        <h2 class="visually-hidden">Всплывающее окно с формой обратной связи</h2>
+        <form action="https://echo.htmlacademy.ru" method="post" class="write-to-us__form">
+            <fieldset>
+                <legend>Напишите нам</legend>
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+                <label for="email">Ваш e-mail:</label>
+                <input type="email" name="email" id="email" placeholder="email@example.com" autocomplete="on">
+                <label for="textarea">Текст письма:</label>
+                <textarea id="textarea" name="textarea">В свободной форме</textarea>
+                <button class="button" type="submit">Отправить</button>
+            </fieldset>
+        </form>
+    </section>
+
+</body>
+
+</html>
