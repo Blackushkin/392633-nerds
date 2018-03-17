@@ -33,27 +33,33 @@
 <!-- здесь будут формы сортировки-->
             <form action="https://echo.htmlacademy.ru" method="post" name="template-parameters">
                 <fieldset>
-                        <label for="min-value">Стоимость</label>
+                    <legend>Стоимость</legend>
+                        <label for="min-value"></label>
                         <input type="range" name="min-value" id="min-value" min="0" max="30000" step="500">
                         <label for="max-value"></label>
                         <input type="range" name="max-value" id="max-value" min="500" max="30000" step="500">
                         от<output name="min-value">[0]</output>
                         до<output name="max-value">[15000]</output>
+                </fieldset>
 
-                        <label for="grid">Сетка</label>
-                        <input type="radio" name="adaptive" id="grid" value="Адаптивная">
-                        <input type="radio" name="fixed" id="grid" value="Фиксированная">
-                        <input type="radio" name="rubber" id="grid" value="Резиновая">
+                <fieldset>
+                    <legend>Сетка</legend>
+                        <input type="radio" name="grid" id="adaptive" value="adaptive"><label for="adaptive">Адаптивная</label>
+                        <input type="radio" name="grid" id="fixed" value="fixed"><label for="fixed">Фиксированная</label>
+                        <input type="radio" name="grid" id="rubber" value="rubber"><label for="rubber">Резиновая</label>
+                </fieldset>
 
-                        <label for="individualities">Особенности</label>
-                        <input type="checkbox" name="slider" id="individualities" value="Слайдер" checked>
-                        <input type="checkbox" name="advantage-block" id="individualities" value="Блок преимуществ">
-                        <input type="checkbox" name="news" id="individualities" value="Новости" checked>
-                        <input type="checkbox" name="gallery" id="individualities" value="Галерея">
-                        <input type="checkbox" name="cart" id="individualities" value="Корзина">
+                <fieldset>
+                    <legend>Особенности</legend>
+                        <input type="checkbox" name="slider" id="slider" value="Слайдер" checked><label for="slider">Слайдер</label>
+                        <input type="checkbox" name="advantage-block" id="advantage-block" value="Блок преимуществ"><label for="advantage-block">Блок преимущществ</label>
+                        <input type="checkbox" name="news" id="news" value="Новости" checked><label for="news">Новости</label>
+                        <input type="checkbox" name="gallery" id="gallery" value="Галерея"><label for="gallery">Галерея</label>
+                        <input type="checkbox" name="cart" id="cart" value="Корзина"><label form="cart">Корзина</label>
+                </fieldset>
 
                         <button class="button" type="submit">Показать</button>
-                </fieldset>
+
             </form>
         </section>
 
