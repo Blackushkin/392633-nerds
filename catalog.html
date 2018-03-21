@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normolize.css">
 </head>
 
 <body class="catalog">
     <header class="main-header">
         <div class="header__wrapper">
-            <a href="#"><img src="img/nerds-logo.png" alt="Логотип Nerds" class="header__logo" width="160" height="65"></a>
+            <a href="index.html"><img src="img/nerds-logo.png" alt="Логотип Nerds" class="header__logo" width="160" height="65"></a>
             <nav class="header__nav">
                 <ul class="header__nav--list">
                     <li class="header__nav--item"><a href="#">Студия</a></li>
@@ -36,9 +36,9 @@
                 <div class="template-parameters__value">
                     <fieldset aria-label="Сортировка по стоимоти">
                         <legend>Стоимость</legend>
-                        <label for="min-value"></label>
+                        <label for="min-value">от</label>
                         <input type="range" name="min-value" id="min-value" min="0" max="30000" step="500">
-                        <label for="max-value"></label>
+                        <label for="max-value">до</label>
                         <input type="range" name="max-value" id="max-value" min="500" max="30000" step="500"> от
                         <output name="min-value"></output> до
                         <output name="max-value"></output>
@@ -74,23 +74,22 @@
         <section class="main-content__ready-templates">
             <div class="ready-templates__sorting">
                 <!-- точно не уверен как прописать верхную сортировку  -->
-                <p></p>
-                <ul class="sorting__list">
-                    <li class="sorting__item"></li>
-                    <li class="sorting__item"></li>
-                    <li class="sorting__item"></li>
-                    <li class="sorting__item">!стрелочки!</li>
-                </ul>
+                <p class="sorting-title">СОРТИРОВАТЬ:</p>
+                <a href="#" class="sorting-title__item" aria-label="">По цене</a>
+                <a href="#" class="sorting-title__item" aria-label="">По типу</a>
+                <a href="#" class="sorting-title__item" aria-label="">По названию</a>
+                <a href="#" class="sorting-title__item" aria-label=""></a>
+                <a href="#" class="sorting-title__item" aria-label=""></a>
 
             </div>
             <div class="ready-templates__content">
                 <ul class="ready-templates__content--list">
                     <li class="ready-templates__content--item">
                         <img src="img/img-sedona.jpg" alt="Фото как мы сделали сайт Sedona">
-                        <p class="cintent__item--hover">
+                        <p class="content__item--hover">
                             <h3>Sedona</h3>
                             <p>Информационный сайт  для туристов</p>
-                            <a href="#">9 900 руб.</a>
+                            <a href="#" class="button">9 900 руб.</a>
                         </p>
                     </li>
                     <li class="ready-templates__content--item">
@@ -98,7 +97,7 @@
                         <p class="cintent__item--hover">
                             <h3>Pink App</h3>
                             <p>Продуктовый лендинг приложения для iOS и Android</p>
-                            <a href="#">9 900 руб.</a>
+                            <a href="#" class="button">9 900 руб.</a>
                         </p>
                     </li>
                     <li class="ready-templates__content--item">
@@ -106,7 +105,7 @@
                         <p class="cintent__item--hover">
                             <h3>Barbershop</h3>
                             <p>Сайт салоны красоты. Для мужчин, да.</p>
-                            <a href="#">9 900 руб.</a>
+                            <a href="#" class="button">9 900 руб.</a>
                         </p>
                     </li>
                     <li class="ready-templates__content--item">
@@ -114,14 +113,14 @@
                         <p class="cintent__item--hover">
                             <h3>MISHKA</h3>
                             <p>Интернет-магазин  вязаных игрушек</p>
-                            <a href="#">9 900 руб.</a>
+                            <a href="#" class="button">9 900 руб.</a>
                         </p>
                     </li>
                     <li class="ready-templates__content--item"><img src="img/img-aplus.jpg" alt="Фото как мы сделали сайт Aplus">
                         <p class="cintent__item--hover">
                             <h3>A Plus</h3>
                             <p>Лендинг курсов повышения квалификации</p>
-                            <a href="#">9 900 руб.</a>
+                            <a href="#" class="button">9 900 руб.</a>
                         </p>
                     </li>
                     <li class="ready-templates__content--item">
@@ -129,17 +128,17 @@
                         <p class="cintent__item--hover">
                             <h3>КВАСТ</h3>
                             <p>Промо-сайт производителя крафтового кваса</p>
-                            <a href="#">9 900 руб.</a>
+                            <a href="#" class="button">9 900 руб.</a>
                         </p>
                     </li>
                 </ul>
             </div>
             <div class="main-content__page-navigation">
                 <ul class="page-navigation__list">
-                    <li class="page-navigation__item"></li>
-                    <li class="page-navigation__item"></li>
-                    <li class="page-navigation__item"></li>
-                    <li class="page-navigation__item"></li>
+                    <li class="page-navigation__item">1</li>
+                    <li class="page-navigation__item">2</li>
+                    <li class="page-navigation__item">3</li>
+                    <li class="page-navigation__item">следующая</li>
                 </ul>
             </div>
         </section>
@@ -154,7 +153,6 @@
                 <p>тел. +7 (812) 275-75-75</p>
                 <a href="#" class="button">Напишите нам</a>
             </div>
-            <img src="#" alt="">
         </div>
     </section>
 
