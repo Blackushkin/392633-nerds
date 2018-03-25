@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #000000;
+    background-color: #fefefe;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* кнопки */
+
+.button {
+    display: inline-block;
+    padding: 13px 30px;
+    font: inherit;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #fb565a;
+}
+
+
+.main-header {
+border: 1px solid black;
+background-color: #ececec;
+display: flex;
+justify-content: center;
+
+}
+
+.header__wrapper {
+border: 1px solid blue;
+display: flex;
+flex-basis: 1160px;
+justify-content: space-between;
+align-items: center;
+padding-top:50px;
+}
+
+.header__wrapper a {
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+.logo__wrapper {
+border: 1px solid grey;
+
+
+
+
+}
+
+.header__nav {
+border: 1px solid red;
+
+
+}
+
+.header__nav--list {
+border: 1px solid yellow;
+list-style: none;
+margin: 0;
+display: flex;
+margin-right: 70px;
+
+
+}
+
+.header__nav--item {
+border: 1px solid green;
+margin-right: 45px;
+}
+
+.header__wrapper--cart {
+border: 1px solid orange;
+
+}
+
+.cart--item {
+border: 1px solid magenta;
+
+}
+
+.cart--item::before {
+
+}
