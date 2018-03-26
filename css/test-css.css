@@ -38,7 +38,7 @@ input[type="radio"].visually-hidden {
 
 .button {
     display: inline-block;
-    padding: 13px 30px;
+    padding: 13px 40px;
     font: inherit;
     text-align: center;
     color: #ffffff;
@@ -63,6 +63,7 @@ justify-content: space-between;
 align-items: center;
 padding-top:50px;
 flex-wrap: wrap;
+overflow: hidden;
 }
 
 .header__wrapper a {
@@ -89,8 +90,10 @@ border: 1px solid red;
 border: 1px solid yellow;
 list-style: none;
 margin: 0;
+padding: 0;
+padding-right: 55px;
 display: flex;
-margin-right: 70px;
+/* margin-right: 70px; */
 flex-wrap: wrap;
 
 
@@ -98,8 +101,9 @@ flex-wrap: wrap;
 }
 
 .header__nav--item {
-border: 1px solid green;
-margin-right: 45px;
+background-color: green;
+margin-right: 25px;
+padding:5px 10px;
 flex-grow: 1;
 }
 
@@ -110,7 +114,9 @@ border: 1px solid orange;
 }
 
 .cart--item {
-border: 1px solid magenta;
+background-color: magenta;
+padding: 5px 10px;
+margin-right: -10px;
 
 
 }
@@ -191,4 +197,85 @@ padding:14px 54px;
 .item-wrap__img {
 padding-right: 30px;
 flex-shrink: 1;
+}
+
+/* main__service */
+
+.main__service {
+border: 1px solid black;
+
+display: flex;
+justify-content: center;
+}
+
+.main__service--wrapper {
+border: 1px solid blue;
+box-sizing: border-box;
+
+flex-basis: 1160px;
+}
+
+.service--list {
+background-color grey;
+margin: 0;
+padding: 0;
+list-style: none;
+margin-right: -50px;
+/* box-sizing: border-box; */
+
+display: flex;
+/* justify-content: space-between; */
+flex-wrap: wrap;
+/* flex-grow: 1; */
+/* max-width: 26%; */
+/* align-items: center;
+align-content: center; */
+
+/* flex-basis: 1160px; */
+}
+
+.service--item {
+background-color: red;
+
+flex-basis: 300px;
+padding-top: 70px;
+/* box-sizing: border-box; */
+/* overflow: hidden; */
+margin-right: 100px;
+display: flex;
+flex-wrap: wrap;
+flex-grow:1;
+
+}
+
+
+
+
+.service--item img {
+width: 300px;
+height: 150px;
+}
+
+.service--item p,
+.service--item h3 {
+margin: 0;
+}
+
+.service--item h3 {
+font-size: 24px;
+font-weight: 700;
+line-height: 30px;
+text-transform: uppercase;
+
+margin-top:20px;
+}
+
+.service--item p {
+margin-top: 15px;
+margin-bottom: 30px;
+}
+
+.service--item .button {
+border: 1px solid yellow;
+margin-top: auto;
 }
