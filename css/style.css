@@ -29,6 +29,13 @@ input[type="radio"].visually-hidden {
     border: 0;
     padding: 0;
     white-space: nowrap;
+
+
+
+
+
+
+
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
@@ -48,26 +55,48 @@ input[type="radio"].visually-hidden {
 /* хедер */
 .main-header {
     background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
 }
 
 .header__wrapper {
-    min-width: 1160px;
-    min-height: 120px;
-
     display: flex;
-    justify-content: space-around;
+    flex-basis: 1160px;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+
+    padding-top: 53px;
+
+
 }
 
 .header__nav--list {
     margin: 0;
+    margin-right: 70px;
     list-style:none;
 
     display: flex;
+    flex-wrap: wrap;
+    flex-basis: 750px;
 }
 
 .header__nav--item {
-    margin-right: 50px;
+    margin-right: 45px;
+
+    flex-grow: 1;
+}
+
+.header__nav--item:last-child {
+    margin: 0;
+}
+
+.cart--item {
+padding-left: 55px;
+}
+
+.cart--item:before {
+/* image-cart */
 }
 
 .header__nav--item a,
@@ -78,32 +107,42 @@ input[type="radio"].visually-hidden {
     text-transform: uppercase;
 }
 
+/* слайдер */
 .main-slider {
     background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
 }
 
 .main-slider__wrapper {
-    min-width: 1160px;
+    flex-basis: 1160px;
+    padding-top: 10px;
 }
 
 .main-slider__list {
-    margin: 0;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .main-slider__item {
     display: flex;
-    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.main-slider__item:not(:first-child) {
+position: absolute;
+z-index: -1;
+opacity: 0;
 }
 
 .item-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-grow: 1;
-
-    max-width: 500px;
+    flex-shrink:5;
+    padding-top: 60px;
 }
 
 .letter-spacing {
@@ -114,14 +153,20 @@ input[type="radio"].visually-hidden {
     font-size: 55px;
     font-weight: 500;
     line-height: 55px;
-    margin-bottom: 25px;
 }
 
 .item-wrap p {
     margin: 0;
-    margin-bottom:40px;
+    margin-top: 25px;;
 }
 
-.item-wrap__img {
+.item-wrap .button {
+margin-top: 40px;
+padding:14px 54px;
+}
 
+
+.item-wrap__img {
+    padding-right: 30px;
+    flex-shrink: 1
 }
