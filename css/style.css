@@ -154,6 +154,127 @@ input[type="radio"].visually-hidden {
 
 
 
+
+/* catalog-title */
+.catalog .header__wrapper--caption {
+display: flex;
+flex-basis: 1160px;
+box-sizing: border-box;
+
+padding-top: 60px;
+padding-bottom: 100px;
+}
+
+.catalog .header__wrapper--caption h1 {
+margin: 0;
+margin: auto;
+
+font-size: 55px;
+line-height: 70px;
+}
+
+
+
+
+
+/* content  forms */
+.catalog .main-content {
+display: flex;
+justify-content: center;
+}
+
+.catalog .main-content-wrapper {
+display: flex;
+justify-content: space-between;
+flex-basis: 1160px;
+padding-top: 55px;
+}
+
+.catalog .main-content__forms {
+flex-basis: 270px;
+flex-direction: column;
+margin-right: 140px;
+}
+
+
+
+
+
+/* content ready templates */
+
+.catalog.main-content__ready-templates {
+flex-basis: 760px;
+flex-wrap: wrap;
+display: flex;
+}
+
+.catalog .ready-templates__sorting {
+
+}
+
+.catalog .sorting-title {
+margin: 0;
+}
+
+.catalog .sorting-title__item {
+
+}
+
+.catalog .ready-templates__content {
+
+}
+
+.catalog .ready-templates__content--list {
+margin: 0;
+padding: 0;
+list-style: none;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.catalog .ready-templates__content--item {
+flex-basis: 360px;
+margin-right: 40px;
+max-height: 620px;
+}
+
+.catalog .ready-templates__content--item p,
+.catalog .ready-templates__content--item h3 {
+margin: 0;
+}
+
+.catalog .content__item--hover {
+
+}
+
+
+
+
+
+
+/* page-nav */
+
+.catalog .main-content__page-navigation {
+
+}
+
+.catalog .page-navigation__list {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+.catalog.page-navigation__item {
+
+}
+
+
+
+
+
+
+
 /* слайдер */
 .main-slider {
     background-color: #eeeeee;
@@ -737,7 +858,7 @@ input[type="radio"].visually-hidden {
     height: 51px;
     margin: 15px 30px 15px 0;
     border: 2px solid #ececec;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .write-to-us__form textarea {
@@ -745,5 +866,5 @@ input[type="radio"].visually-hidden {
     width: 750px;
     height: 116px;
     border: 2px solid #ececec;
-    border-radius: 3px;
+    border-radius: 5px;
 }
