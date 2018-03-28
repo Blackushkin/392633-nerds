@@ -165,7 +165,7 @@
             </div>
             <div class="footer__tagline" aria-label="Специальное предложение для друзей">
                 <p><b>Давайте дружить, это выгодно!</b></p>
-                <p>Скидка 10% для друзей из социальных сетей.</p>
+                <p class="sale">Скидка 10% для друзей из социальных сетей.</p>
             </div>
 
         </div>
@@ -174,18 +174,26 @@
     <!-- всплывающее окно -->
     <section class="popap-write-to-us">
         <h2 class="visually-hidden">Всплывающее окно с формой обратной связи</h2>
-        <form action="https://echo.htmlacademy.ru" method="post" class="write-to-us__form">
-            <fieldset>
-                <legend>Напишите нам</legend>
-                <label for="name">Ваше имя</label>
-                <input type="text" id="name" name="name" placeholder="Имя Фамилия">
-                <label for="email">Ваш e-mail:</label>
-                <input type="email" name="email" id="email" placeholder="email@example.com" autocomplete="on">
-                <label for="textarea">Текст письма:</label>
-                <textarea id="textarea" name="textarea" >В свободной форме</textarea>
-                <button class="button" type="submit">Отправить</button>
-            </fieldset>
-        </form>
+        <div class="popap-wrapper">
+            <form action="https://echo.htmlacademy.ru" method="post" class="write-to-us__form">
+                <fieldset>
+                    <legend>Напишите нам</legend>
+                    <div class="half-width">
+                        <label for="name">Ваше имя</label><br>
+                        <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+                    </div>
+                    <div class="half-width">
+                        <label for="email">Ваш e-mail:</label><br>
+                        <input type="email" name="email" id="email" placeholder="email@example.com" autocomplete="on">
+                    </div>
+                    <div class="textarea">
+                        <label for="textarea">Текст письма:</label><br>
+                        <textarea id="textarea" name="textarea" placeholder="В свободной форме"></textarea>
+                    </div>
+                    <button class="button" type="submit">Отправить</button>
+                </fieldset>
+            </form>
+        </div>
     </section>
 </body>
 
