@@ -37,42 +37,86 @@
                 <form action="https://echo.htmlacademy.ru" method="post" name="template-parameters" oninput="min-value.value=min-value.value max-value.value=max-value.value">
                     <div class="template-parameters__value">
                         <fieldset aria-label="Сортировка по стоимоти">
-                            <legend>Стоимость</legend>
-                            <label for="min-value">от</label>
-                            <input type="range" name="min-value" id="min-value" min="0" max="30000" step="500">
-                            <label for="max-value">до</label>
-                            <input type="range" name="max-value" id="max-value" min="500" max="30000" step="500"> от
-                            <output name="min-value"></output> до
-                            <output name="max-value"></output>
+                            <div>
+                                <legend class="form-price">Стоимость</legend>
+                            </div>
+                            <div class="min-value">
+                                <label for="min-value">от</label>
+                                <input type="range" name="min-value" id="min-value" min="0" max="30000" step="500">до</label>
+                            </div>
+                            <!-- <p class="max-value">
+                                <label for="max-value">
+                                <input type="range" name="max-value" id="max-value" min="500" max="30000" step="500">до</label>
+                            </p> -->
+                            <div>
+                                <output name="min-value"></output>
+                                <output name="max-value"></output>
+                            </div>
                             <!--не выводит значения output, не знаю что делать  -->
                         </fieldset>
                     </div>
 
                     <div class="template-parameters__grid">
                         <fieldset aria-label="Сортировка по типу сетки">
-                            <legend>Сетка</legend>
-                            <input type="radio" name="grid" id="adaptive" value="adaptive" checked>
-                            <label for="adaptive">Адаптивная</label>
-                            <input type="radio" name="grid" id="fixed" value="fixed">
-                            <label for="fixed">Фиксированная</label>
-                            <input type="radio" name="grid" id="rubber" value="rubber">
-                            <label for="rubber">Резиновая</label>
+                            <div>
+                                <legend>Сетка:</legend>
+                            </div>
+                            <div class="adaptive">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="radio-on"><path d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/><circle cx="12.5" cy="12.5" r="4.5"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="radio-off"><path d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/></svg>
+                                <input type="radio" name="grid" id="adaptive" value="adaptive" checked>
+                                <label for="adaptive">Адаптивная</label>
+                            </div>
+                            <div class="fixed">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="radio-on"><path d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/><circle cx="12.5" cy="12.5" r="4.5"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="radio-off"><path d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/></svg>
+                                <input type="radio" name="grid" id="fixed" value="fixed">
+                                <label for="fixed">Фиксированная</label>
+                            </div>
+                            <div class="rubber">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="radio-on"><path d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/><circle cx="12.5" cy="12.5" r="4.5"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="radio-off"><path d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/></svg>
+                                <input type="radio" name="grid" id="rubber" value="rubber">
+                                <label for="rubber">Резиновая</label>
+                            </div>
                         </fieldset>
                     </div>
 
                     <div class="template-parameters__features">
                         <fieldset aria-label="Сортировка по особенностям">
+                            <div>
                             <legend>Особенности</legend>
-                            <input type="checkbox" name="slider" id="slider" value="Слайдер" checked>
-                            <label for="slider">Слайдер</label>
-                            <input type="checkbox" name="advantage-block" id="advantage-block" value="Блок преимуществ">
-                            <label for="advantage-block">Блок преимущществ</label>
-                            <input type="checkbox" name="news" id="news" value="Новости" checked>
-                            <label for="news">Новости</label>
-                            <input type="checkbox" name="gallery" id="gallery" value="Галерея">
-                            <label for="gallery">Галерея</label>
+                            </div>
+                            <div class="slider">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23" class="check-on"><path d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" class="check-off"><path d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>
+                                <input type="checkbox" name="slider" id="slider" value="Слайдер" checked>
+                                <label for="slider">Слайдер</label>
+                            </div>
+                            <div class="advantage-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23" class="check-on"><path d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" class="check-off"><path d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>
+                                <input type="checkbox" name="advantage-block" id="advantage-block" value="Блок преимуществ">
+                                <label for="advantage-block">Блок преимущществ</label>
+                            </div>
+                            <div class="news">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23" class="check-on"><path d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" class="check-off"><path d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>
+                                <input type="checkbox" name="news" id="news" value="Новости" checked>
+                                <label for="news">Новости</label>
+                            </div>
+                            <div class="gallery">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23" class="check-on"><path d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" class="check-off"><path d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>
+                                <input type="checkbox" name="gallery" id="gallery" value="Галерея">
+                                <label for="gallery">Галерея</label>
+                            </div>
+                            <div class="cart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23" class="check-on"><path d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" class="check-off"><path d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>
                             <input type="checkbox" name="cart" id="cart" value="Корзина">
                             <label for="cart">Корзина</label>
+                            </div>
                         </fieldset>
                     </div>
 
@@ -83,13 +127,12 @@
 
             <section class="main-content__ready-templates">
                 <div class="ready-templates__sorting">
-                    <!-- точно не уверен как прописать верхную сортировку  -->
                     <p class="sorting-title">СОРТИРОВАТЬ:</p>
-                    <a href="#" class="sorting-title__item" aria-label="">По цене</a>
-                    <a href="#" class="sorting-title__item" aria-label="">По типу</a>
-                    <a href="#" class="sorting-title__item" aria-label="">По названию</a>
-                    <a href="#" class="sorting-title__item" aria-label=""></a>
-                    <a href="#" class="sorting-title__item" aria-label=""></a>
+                    <a href="#" class="sorting-title__item" aria-label="Сортировка по цене">По цене</a>
+                    <a href="#" class="sorting-title__item" aria-label="Сортировка по типу">По типу</a>
+                    <a href="#" class="sorting-title__item" aria-label="Сортировка по названию">По названию</a>
+                    <a href="#" class="sorting-title__item" aria-label="Сортировать в стандартном порядке отображения"></a>
+                    <a href="#" class="sorting-title__item" aria-label="Сортировать в обратном порядке отображения"></a>
 
                 </div>
                 <div class="ready-templates__content">
