@@ -37,11 +37,9 @@
                 <form action="https://echo.htmlacademy.ru" method="post" name="template-parameters" oninput="min-value.value=min-value.value max-value.value=max-value.value">
                     <div class="template-parameters__value">
                         <fieldset aria-label="Сортировка по стоимоти">
-                            <div>
-                                <legend class="form-price">Стоимость</legend>
-                            </div>
+                            <legend class="form-price">Стоимость</legend>
                             <div class="min-value">
-                                <label for="min-value">от</label>
+                                <label for="min-value">от
                                 <input type="range" name="min-value" id="min-value" min="0" max="30000" step="500">до</label>
                             </div>
                             <!-- <p class="max-value">
@@ -58,9 +56,7 @@
 
                     <div class="template-parameters__grid">
                         <fieldset aria-label="Сортировка по типу сетки">
-                            <div>
-                                <legend>Сетка:</legend>
-                            </div>
+                            <legend>Сетка:</legend>
                             <div class="adaptive">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="radio-on"><path d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/><circle cx="12.5" cy="12.5" r="4.5"/></svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="radio-off"><path d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/></svg>
@@ -84,9 +80,7 @@
 
                     <div class="template-parameters__features">
                         <fieldset aria-label="Сортировка по особенностям">
-                            <div>
                             <legend>Особенности</legend>
-                            </div>
                             <div class="slider">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23" class="check-on"><path d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" class="check-off"><path d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/></svg>
@@ -128,67 +122,125 @@
             <section class="main-content__ready-templates">
                 <div class="ready-templates__sorting">
                     <p class="sorting-title">СОРТИРОВАТЬ:</p>
-                    <a href="#" class="sorting-title__item" aria-label="Сортировка по цене">По цене</a>
-                    <a href="#" class="sorting-title__item" aria-label="Сортировка по типу">По типу</a>
-                    <a href="#" class="sorting-title__item" aria-label="Сортировка по названию">По названию</a>
-                    <a href="#" class="sorting-title__item" aria-label="Сортировать в стандартном порядке отображения"></a>
-                    <a href="#" class="sorting-title__item" aria-label="Сортировать в обратном порядке отображения"></a>
-
+                    <div class="sorting-wrapper">
+                        <p class="sorting--type">
+                            <a href="#" class="sorting-title__item sorting-title__item--actyve" aria-label="Сортировка по цене">По цене</a>
+                            <a href="#" class="sorting-title__item" aria-label="Сортировка по типу">По типу</a>
+                            <a href="#" class="sorting-title__item" aria-label="Сортировка по названию">По названию</a>
+                        </p>
+                        <p class="sorting-direction">
+                            <a href="#" class="sorting-title__item sorting-title__item--actyve" aria-label="Сортировать в стандартном порядке отображения">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path fill="#A6A6A6" d="M5.5 0L0 10h11z"/></svg>
+                            </a>
+                            <a href="#" class="sorting-title__item" aria-label="Сортировать в обратном порядке отображения">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path fill="#A6A6A6" d="M5.5 0L0 10h11z"/></svg>
+                            </a>
+                        </p>
+                    </div>
                 </div>
                 <div class="ready-templates__content">
                     <ul class="ready-templates__content--list">
                         <li class="ready-templates__content--item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            	 width="360px" height="40px" viewBox="0 0 360 40" enable-background="new 0 0 360 40" xml:space="preserve">
+                            <path fill="#E9E9E9" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7
+                            	s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27
+                            	c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                            </svg>
                             <img src="img/img-sedona.jpg" alt="Фото как мы сделали сайт Sedona">
-                            <p class="content__item--hover">
-                                <h3>Sedona</h3>
-                                <p>Информационный сайт  для туристов</p>
-                                <a href="#" class="button">9 900 руб.</a>
-                            </p>
+                            <div class="content__item--hover">
+                                <div class="item--hover__wrap">
+                                    <a href="#"><h3>Sedona</h3></a>
+                                    <p>Информационный сайт  для туристов</p>
+                                    <p class="button">9 900 руб.</p>
+                                </div>
+                            </div>
                         </li>
                         <li class="ready-templates__content--item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            	 width="360px" height="40px" viewBox="0 0 360 40" enable-background="new 0 0 360 40" xml:space="preserve">
+                            <path fill="#E9E9E9" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7
+                            	s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27
+                            	c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                            </svg>
                             <img src="img/img-pink.jpg" alt="Фото как мы сделали сайт PINK">
-                            <p class="cintent__item--hover">
-                                <h3>Pink App</h3>
-                                <p>Продуктовый лендинг приложения для iOS и Android</p>
-                                <a href="#" class="button">9 900 руб.</a>
-                            </p>
+                            <div class="content__item--hover">
+                                <div class="item--hover__wrap">
+                                    <a href="#"><h3>Pink App</h3></a>
+                                    <p>Продуктовый лендинг приложения для iOS и Android</p>
+                                    <p class="button">9 900 руб.</p>
+                                </div>
+                            </div>
                         </li>
                         <li class="ready-templates__content--item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            	 width="360px" height="40px" viewBox="0 0 360 40" enable-background="new 0 0 360 40" xml:space="preserve">
+                            <path fill="#E9E9E9" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7
+                            	s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27
+                            	c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                            </svg>
                             <img src="img/img-barbershop.jpg" alt="Фото как мы сделали сайт Barbershop">
-                            <p class="cintent__item--hover">
-                                <h3>Barbershop</h3>
-                                <p>Сайт салоны красоты. Для мужчин, да.</p>
-                                <a href="#" class="button">9 900 руб.</a>
-                            </p>
+                            <div class="content__item--hover">
+                                <div class="item--hover__wrap">
+                                    <a href="#"><h3>Barbershop</h3></a>
+                                    <p>Сайт салоны красоты. Для мужчин, да.</p>
+                                    <p class="button">9 900 руб.</p>
+                                </div>
+                            </div>
                         </li>
                         <li class="ready-templates__content--item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            	 width="360px" height="40px" viewBox="0 0 360 40" enable-background="new 0 0 360 40" xml:space="preserve">
+                            <path fill="#E9E9E9" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7
+                            	s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27
+                            	c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                            </svg>
                             <img src="img/img-mishka.jpg" alt="Фото как мы сделали сайт MISHKA">
-                            <p class="cintent__item--hover">
-                                <h3>MISHKA</h3>
-                                <p>Интернет-магазин  вязаных игрушек</p>
-                                <a href="#" class="button">9 900 руб.</a>
-                            </p>
-                        </li>
-                        <li class="ready-templates__content--item"><img src="img/img-aplus.jpg" alt="Фото как мы сделали сайт Aplus">
-                            <p class="cintent__item--hover">
-                                <h3>A Plus</h3>
-                                <p>Лендинг курсов повышения квалификации</p>
-                                <a href="#" class="button">9 900 руб.</a>
-                            </p>
+                            <div class="content__item--hover">
+                                <div class="item--hover__wrap">
+                                    <a href="#"><h3>MISHKA</h3></a>
+                                    <p>Интернет-магазин  вязаных игрушек</p>
+                                    <p class="button">9 900 руб.</p>
+                                </div>
+                            </div>
                         </li>
                         <li class="ready-templates__content--item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            	 width="360px" height="40px" viewBox="0 0 360 40" enable-background="new 0 0 360 40" xml:space="preserve">
+                            <path fill="#E9E9E9" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7
+                            	s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27
+                            	c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                            </svg>
+                            <img src="img/img-aplus.jpg" alt="Фото как мы сделали сайт Aplus">
+                            <div class="content__item--hover">
+                                <div class="item--hover__wrap">
+                                    <a href="#"><h3>A Plus</h3></a>
+                                    <p>Лендинг курсов повышения квалификации</p>
+                                    <p class="button">9 900 руб.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ready-templates__content--item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            	 width="360px" height="40px" viewBox="0 0 360 40" enable-background="new 0 0 360 40" xml:space="preserve">
+                            <path fill="#E9E9E9" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7
+                            	s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27
+                            	c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                            </svg>
                             <img src="img/img-kvast.jpg" alt="Фото как мы сделали сайт Kvast">
-                            <p class="cintent__item--hover">
-                                <h3>КВАСТ</h3>
-                                <p>Промо-сайт производителя крафтового кваса</p>
-                                <a href="#" class="button">9 900 руб.</a>
-                            </p>
+                            <div class="content__item--hover">
+                                <div class="item--hover__wrap">
+                                    <a href="#"><h3>КВАСТ</h3></a>
+                                    <p>Промо-сайт производителя крафтового кваса</p>
+                                    <p class="button">9 900 руб.</p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
                 <div class="main-content__page-navigation">
                     <ul class="page-navigation__list">
-                        <li class="page-navigation__item">1</li>
+                        <li class="page-navigation__item page--actyve">1</li>
                         <li class="page-navigation__item">2</li>
                         <li class="page-navigation__item">3</li>
                         <li class="page-navigation__item">следующая</li>
