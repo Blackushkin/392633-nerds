@@ -185,84 +185,370 @@ input[type="radio"].visually-hidden {
     padding-top: 55px;
 }
 
-.catalog .main-content__forms {
-    flex-basis: 260px;
-    flex-direction: column;
-    margin-right: 174px;
-    box-sizing: border-box;
+/* range filter */
+.main-content__forms {
+margin-right: 140px;
 }
 
-.catalog .main-content__forms legend,
-.catalog .main-content__forms label,
-.catalog .main-content__forms input,
-.catalog .main-content__forms fieldset {
-    font: inherit;
+.main-content__forms fieldset {
+border: none;
+}
+
+.main-content__forms legend {
+font-family: inherit;
+font-weight: 700;
+font-size: 18px;
+line-height: 30px;
+text-transform: uppercase;
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  /* Для демонстрации */
+  width: 260px;
+  margin: 50px auto;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #f1f1f1;
+
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+
+
+
+
+
+/* Сортировка по типу сетки */
+.template-parameters__grid fieldset {
+    border: none;
     margin: 0;
     padding: 0;
-    list-style: none;
-    border: none;
 }
 
-.catalog .main-content__forms legend {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 24px;
-    text-transform: uppercase;
-}
-
-.catalog .main-content__forms p {
-    margin: 0;
-    position: relative;
-    padding: 10px 0;
-}
-
-.main-content__forms .radio-on,
-.main-content__forms .radio-off {
-    position: absolute;
-}
-
-.template-parameters__value p:first-child {
-    margin-top:;
-}
-
-.template-parameters__value p:nth-of-type(2) {
-    padding: 25px 10px;
-    width: 240px;
-    background-color: #EEEEEE;
+.template-parameters__grid {
     margin-top: 55px;
 }
 
-.catalog .main-content__forms .form-price {
-    margin-bottom: 50px;
+.template-parameters__grid div {
+    margin-top: 14px;
 }
 
-.catalog .main-content__forms .min-value {
-    margin-bottom: 65px;
+.template-parameters__grid legend {
+    margin-bottom: 5px;
 }
 
-.catalog .main-content__forms input {
-    padding: 40px 15px;
+.template-parameters__grid input {
+    display: none;
+}
+
+.template-parameters__grid label {
+    position: relative;
+
+    padding-left: 35px;
+
+    line-height: 20px;
+    font-family: inherit;
+    color: #B8B8B8;
+    font-weight: 500;
+}
+
+.template-parameters__grid label::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    display: none;
+
+    width: 26px;
+    height: 26px;
+
+    left: 0px;
+    top: -5px;
+
+    background-image: url(../img/radio-on.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.template-parameters__grid label:hover::before {
+    background-image: url(../img/radio-on-hover.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.template-parameters__grid input[type="radio"]:checked + label::before {
+    display: block;
+}
+
+.template-parameters__grid input[type="radio"]:disabled + label {
+    color: #EDEDED;
+}
+
+.template-parameters__grid input[type="radio"]:disabled + label::after {
+    display: block;
+    background-image: url(../img/radio-off-disabled.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.template-parameters__grid input[type="radio"]:checked:disabled + label::after {
+    display: block;
+    background-image: url(../img/radio-off-disabled.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.template-parameters__grid label:hover {
+    color: #4D4D4D;
+}
+
+.template-parameters__grid label::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+
+    width: 26px;
+    height: 26px;
+
+    left: 0px;
+    top: -5px;
+
+    background-image: url(../img/radio-off.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.template-parameters__grid label:hover::after {
+    background-image: url(../img/radio-off-hover.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+/* button */
+.main-content__forms .button {
+    margin-top: 45px;
+
+    padding: 10px 85px;
     background-color: #EEEEEE;
+    border-radius: 5px;
+    border: none;
+
+    color: #000000;
+    font-weight: 700;
 }
 
-.catalog .template-parameters__grid legend {
-    margin-top: 30px;
+.main-content__forms .button:hover {
+background-color: #4D4D4D;
+color: #ffffff;
 }
 
-.template-parameters__grid input[type="radio"] {
+
+
+
+
+/* Сортировка по особенностям */
+.template-parameters__features fieldset {
+border: none;
+padding: 0;
+margin: 0;
+margin-top: 45px;
+}
+
+.template-parameters__featuresd {
+    margin-top: 20px;
+}
+
+.template-parameters__features div {
+    margin-top: 15px;
+}
+
+.template-parameters__features legend {
+    margin-bottom: 5px
+}
+
+.template-parameters__features input {
     display: none;
 }
 
-.template-parameters__grid > label {
-    padding-left: 40px;
+.template-parameters__features label {
+    position: relative;
+
+    padding-left: 35px;
+
+    line-height: 20px;
+    font-family: inherit;
+    color: #B8B8B8;
+    font-weight: 500;
 }
 
-.template-parameters__grid p:first-child {
-    margin-top: 60px;
-}
-
-.template-parameters__features input[type="checkbox"] {
+.template-parameters__features label::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
     display: none;
+
+    width: 30px;
+    height: 26px;
+
+    left: 0px;
+    top: -5px;
+
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.template-parameters__features label:hover::before {
+    background-image: url(../img/checkbox-on-hover.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.template-parameters__features input[type="checkbox"]:checked + label::before {
+    display: block;
+}
+
+.template-parameters__features input[type="checkbox"]:checked + label::after {
+display: none;
+}
+
+.template-parameters__features input[type="checkbox"]:disabled + label {
+    color: #EDEDED;
+}
+
+.template-parameters__features input[type="checkbox"]:disabled + label::after {
+    display: block;
+    background-image: url(../img/checkbox-off-disabled.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.template-parameters__features input[type="checkbox"]:checked:disabled + label::before {
+    display: block;
+    background-image: url(../img/checkbox-on-disabled.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.template-parameters__features label:hover {
+    color: #4D4D4D;
+}
+
+.template-parameters__features label::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+
+    width: 26px;
+    height: 26px;
+
+    left: 0px;
+    top: -5px;
+
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.template-parameters__features label:hover::after {
+    background-image: url(../img/checkbox-off-hover.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -368,7 +654,6 @@ input[type="radio"].visually-hidden {
 
 .catalog .ready-templates__content--item {
     flex-basis: 360px;
-    margin-right: 40px;
     margin-bottom: 30px;
     max-height: 620px;
     position: relative;
@@ -445,7 +730,8 @@ input[type="radio"].visually-hidden {
 /* page-nav */
 
 .catalog .main-content__page-navigation {
-    margin-top: 20px;
+    margin-top: 25px;
+margin-left: 5px;
 }
 
 .catalog .page-navigation__list {
@@ -456,7 +742,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog .page-navigation__item {
-    padding: 10px 17px;
+    padding: 10px 20px;
     margin-right: 10px;
     font-weight: 700;
     text-transform: uppercase;
@@ -496,10 +782,13 @@ input[type="radio"].visually-hidden {
     justify-content: center;
 }
 
-.main-slider__wrapper {
-    flex-basis: 1160px;
-    padding-top: 10px;
-    box-sizing: border-box;
+.main-slider-wrrapper {
+    display: flex;
+    max-width: 1160px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 12px;
 }
 
 .main-slider__list {
@@ -862,11 +1151,15 @@ input[type="radio"].visually-hidden {
     margin: 0 auto;
     margin-top: 80px;
     position: relative;
-    background-image: url("/img/map.jpg");
+    background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
     background-position: 0px -145px;
     background-size: 1440px;
     background-color: #dfe2e3;
+}
+
+.catalog .main-map {
+margin-top: 60px;
 }
 
 .main-map__wrapper {
