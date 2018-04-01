@@ -190,6 +190,10 @@ input[type="radio"].visually-hidden {
 margin-right: 140px;
 }
 
+.main-content__forms fieldset {
+border: none;
+}
+
 .main-content__forms legend {
 font-family: inherit;
 font-weight: 700;

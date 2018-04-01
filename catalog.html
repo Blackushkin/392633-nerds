@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/min-style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
@@ -35,6 +35,7 @@
                 <h2 class="visually-hidden">Сортировка шаблонов по параметрам</h2>
                 <form action="https://echo.htmlacademy.ru" method="post" name="template-parameters" oninput="min-value.value=min-value.value max-value.value=max-value.value">
                     <div class="template-parameters__value">
+                        <fieldset>
                         <legend>Стоимость:</legend>
                         <div class="range-filter">
                           <div class="range-controls">
@@ -49,8 +50,7 @@
                             <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
                           </div>
                         </div>
-
-                        </fieldset>
+                    </fieldset>
                     </div>
                     <div class="template-parameters__grid">
                         <fieldset aria-label="Сортировка по типу сетки">
