@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
@@ -7,6 +7,7 @@ body {
     font-weight: 400;
     color: #000000;
     background-color: #ffffff;
+    max-width: 1200px;
 }
 
 a {
@@ -64,6 +65,8 @@ input[type="radio"].visually-hidden {
     background-color: #eeeeee;
     display: flex;
     justify-content: center;
+    width: 1440px;
+    margin-left: -10%;
 }
 
 .header__wrapper {
@@ -861,6 +864,8 @@ margin-right: 5px;
     background-color: #eeeeee;
     display: flex;
     justify-content: center;
+    width: 1440px;
+    margin-left: -10%;
 }
 
 .main-slider-wrrapper {
@@ -1255,6 +1260,7 @@ margin-top: -5px;
     min-height: 420px;
     margin: 0 auto;
     margin-top: 78px;
+    margin-left: -10%;
     position: relative;
     background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
@@ -1265,6 +1271,7 @@ margin-top: -5px;
 
 .catalog .main-map {
     margin-top: 55px;
+    margin-left: -10%;
 }
 
 .main-map__wrapper {
@@ -1650,4 +1657,104 @@ letter-spacing: 0.2px;
 
 .modal-close::after {
     transform: rotate(-45deg);
+}
+
+.popap-write-to-us label[for="name"]:hover,
+.popap-write-to-us label[for="email"]:hover,
+.popap-write-to-us label[for="textarea"]:hover,
+.popap-write-to-us input[type="text"]:hover,
+.popap-write-to-us input[type="email"]:hover,
+.popap-write-to-us textarea:hover {
+border-color: #B4B9BB;
+}
+
+.popap-write-to-us input:hover::-webkit-input-placeholder {
+color: #B4B9BB;
+}
+
+.popap-write-to-us input:hover::-moz-placeholder {
+color: #B4B9BB;
+}
+
+.popap-write-to-us input:hover:-moz-placeholder {
+color: #B4B9BB;
+}
+
+.popap-write-to-us input:hover:-ms-input-placeholder {
+color: #B4B9BB;
+}
+
+.popap-write-to-us textarea:hover::-webkit-input-placeholder {
+color: #B4B9BB;
+}
+
+.popap-write-to-us textarea:hover::-moz-placeholder {
+color: #B4B9BB;
+}
+
+.popap-write-to-us textarea:hover:-moz-placeholder {
+color: #B4B9BB;
+}
+.popap-write-to-us textarea:hover:-ms-input-placeholder {
+color: #B4B9BB;
+}
+
+.popap-write-to-us label[for="name"]:focus,
+.popap-write-to-us label[for="email"]:focus,
+.popap-write-to-us label[for="textarea"]:focus,
+.popap-write-to-us input[type="text"]:focus,
+.popap-write-to-us input[type="email"]:focus,
+.popap-write-to-us textarea:focus {
+border-color: #000000;
+outline: none;
+}
+
+.popap-write-to-us input:focus::-webkit-input-placeholder {
+color: #000000;
+}
+
+.popap-write-to-us input:focus::-moz-placeholder {
+color: #000000;
+}
+
+.popap-write-to-us input:focus:-moz-placeholder {
+color: #000000;
+}
+
+.popap-write-to-us input:focus:-ms-input-placeholder {
+color: #000000;
+}
+
+.popap-write-to-us textarea:focus::-webkit-input-placeholder {
+color: #000000;
+}
+
+.popap-write-to-us textarea:focus::-moz-placeholder {
+color: #000000;
+}
+
+.popap-write-to-us textarea:focus:-moz-placeholder {
+color: #000000;
+}
+.popap-write-to-us textarea:focus:-ms-input-placeholder {
+color: #000000;
+}
+
+.popap-write-to-us label[for="name"]:invalid,
+.popap-write-to-us label[for="email"]:invalid,
+.popap-write-to-us label[for="textarea"]:invalid,
+.popap-write-to-us input[type="text"]:invalid,
+.popap-write-to-us input[type="email"]:invalid {
+border-color: #E74246;
+}
+
+.popap-write-to-us label[for="name"]:invalid,
+.popap-write-to-us label[for="email"]:invalid,
+.popap-write-to-us label[for="textarea"]:invalid,
+.popap-write-to-us input[type="text"]:invalid,
+.popap-write-to-us input[type="email"]:invalid,
+.popap-write-to-us textarea:invalid {
+border-color: #E74246;
+outline: none;
+color: #E74246;
 }
