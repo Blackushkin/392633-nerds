@@ -65,8 +65,8 @@ input[type="radio"].visually-hidden {
     background-color: #eeeeee;
     display: flex;
     justify-content: center;
-    width: 1440px;
-    margin-left: -10%;
+    max-width: 1200px;
+    /* margin-left: -10%; */
 }
 
 .header__wrapper {
@@ -85,6 +85,7 @@ input[type="radio"].visually-hidden {
 
 .logo__wrapper {
     margin-top: -5px;
+/* margin-left: 88px; */
 }
 
 .header__logo:hover {
@@ -101,11 +102,12 @@ input[type="radio"].visually-hidden {
 
 .header__nav--list {
     margin: 0;
-    margin-right: 25px;
+    margin-left: -25px;
+margin-top: 3px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 750px;
+    max-width: 750px;
 }
 
 .catalog .header__nav--list {
@@ -113,7 +115,7 @@ input[type="radio"].visually-hidden {
 }
 
 .header__nav--item {
-    margin-right: 45px;
+    margin-right: 46px;
     flex-grow: 1;
 }
 
@@ -864,8 +866,8 @@ margin-right: 5px;
     background-color: #eeeeee;
     display: flex;
     justify-content: center;
-    width: 1440px;
-    margin-left: -10%;
+    width: 1200px;
+    /* margin-left: -10%; */
 }
 
 .main-slider-wrrapper {
@@ -1256,15 +1258,15 @@ margin-top: -5px;
 
 /* map */
 .main-map {
-    max-width: 1440px;
+    max-width: 1200px;
     min-height: 420px;
     margin: 0 auto;
     margin-top: 78px;
-    margin-left: -10%;
+/*     margin-left: -10%; */
     position: relative;
     background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
-    background-position: 0px -145px;
+    background-position: -120px -145px;
     background-size: 1440px;
     background-color: #dfe2e3;
 }
@@ -1277,7 +1279,7 @@ margin-top: -5px;
 .main-map__wrapper {
     position: absolute;
     top: 55px;
-    left: 130px;
+    left: 10px;
     padding: 21px 60px 20px 60px;
     background-color: #ffffff;
     width: 210px;
