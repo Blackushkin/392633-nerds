@@ -1102,19 +1102,20 @@ margin-top: -5px;
     padding-left: 35px;
     margin-top: 27px;
     position: relative;
-    line-height: 22px;
+    line-height: 21px;
 }
 
 .about-us__item::before {
     content: "";
     width: 25px;
-    height: 5px;
-    background-image: url("/img/red-line.png");
+    height: 2px;
+    /* background-image: url("../img/red-line.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
+background-color: #E74246;
     position: absolute;
     left: 0px;
-    top: 8px;
+    top: 9px;
 }
 
 .about-us__statistic {
